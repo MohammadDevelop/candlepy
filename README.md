@@ -1,5 +1,6 @@
 # candlepy
 Candle sticks pattern detection using python.
 
-#to do
+## to do
+
 finalize and publish on pypi
