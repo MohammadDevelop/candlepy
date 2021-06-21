@@ -1,20 +1,24 @@
 #Main General Uilities
 
-def isRED(cand):
-    o=float(cand[1])
-    h=float(cand[2])
-    l=float(cand[3])
-    c=float(cand[4])
+def isRED(candle):
+    """
+    Takes a list of float/string as a candle. NOHLC format (ID,Open,High,Low,Close).
+    returns true if it is RED!
+    """
+    o=float(candle[1])
+    c=float(candle[4])
     return o>c
 
-def isGREEEN(cand):
-    o=float(cand[1])
-    h=float(cand[2])
-    l=float(cand[3])
-    c=float(cand[4])
-    return o>c
+def isGREEEN(candle):
+    """
+    Takes a list of float/string as a candle. NOHLC format (ID,Open,High,Low,Close).
+    returns true if it is GREEN!
+    """
+    o=float(candle[1])
+    c=float(candle[4])
+    return o<c
 
-def Trend(candles,candle,count):
+def Trend(candles,count):
 
     """
     Takes a list of candle sticks and determines its total trend.
